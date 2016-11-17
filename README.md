@@ -32,7 +32,14 @@ Analyze the relationships (one-to-one, one-to-many, or many-to-many) between the
 - A trail condition can have only runner who posted it
 - No direct relationship between trails and runners exists
 
-***** post image of ERD here *****
+```text
+┌──────────────┐       ┌───────────-──────┐       ┌──────────────┐
+│              │      ╱│                  │╲      │              │
+│    trails    │───────│ trail conditions │────--─│ runners      │
+│              │      ╲│                  │╱      │              │
+└──────────────┘       └────────────-─────┘       └──────────────┘
+
+```
 
 ##Step 3: Create a migration file
 
