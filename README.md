@@ -79,6 +79,6 @@ Write out some queries using Knex.js that allow you to do the following:
 - update rows in a PostgreSQL table.
 - delete rows from a PostgreSQL table.
 
-**Challenge yourself** by creating some complex queries! Reference the Knex.js documentation a lot; familiarizing yourself with these docs now will save you lots of time (and pain!) in the near future :)
+**Challenge yourself** by creating some complex queries! Reference the Knex.js documentation a lot; familiarizing yourself with these docs now will save you lots of time (and pain...) in the near future.
 
 If you'd like feedback on your work, submit it to the assignment **Crushing_Knex**.
