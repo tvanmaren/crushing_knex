@@ -41,6 +41,21 @@ Analyze the relationships (one-to-one, one-to-many, or many-to-many) between the
 
 ```
 
+Following is an ERD to represent the relationship between trails and trail conditions:
+
+```text
+┌──────────────┐       ┌──────────────┐
+│    trails    │       │    trail     |
+│              |       |  conditions  |
+│──────────────│       │──────────────│
+│ id           │       │ id           │
+│ name         │       │ trail_id     │
+│ length       │      ╱│ user_id      │
+│ elev_gain    │───────│ condition    │
+│              │      ╲│ creation_date│
+└──────────────┘       └──────────────┘
+```
+
 ##Step 3: Create a migration file
 
 Remember that a migration is a file that contains SQL commands that are used to create and re-create the tables in a database on demand. Reference the [Intro to SQL]('https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md') article to remind yourself what to place in this file, and how to run it so that the tables are created in your database.
