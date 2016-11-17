@@ -90,7 +90,7 @@ INSERT INTO trails (name, description, length, elevation_gain) VALUES ('Mount Sa
 
 Remember that Knex.js is a third-party JavaScript library that builds SQL commands and sends them to a relational database system. Knex.js allows you to build a Node.js-based PostgreSQL client that communicates with a PostgreSQL server. Reference the [Knex.JS article]('https://github.com/gSchool/node-curriculum/blob/master/Knex/README.md') to set up a Node.js project that connects to the database you just created.
 
-**HINT:** Remember that there are a couple npm packages that will be essential to install.
+**HINT:** Remember that there are two npm packages that will be essential to install.
 
 
 ##Step 6: Query the sh*t out of your database
