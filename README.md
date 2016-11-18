@@ -11,7 +11,7 @@
 
 Think about a topic that is interesting to you. What data might you collect and store in a publicly-accessible database that relates to that particular topic?
 
-**Example:** Perhaps you are interested in trail running, and wish there was a database where runners could share comments about current trail conditions. The data that might need to be stored includes:
+**Example:** Perhaps you are interested in trail running, and wish there were a database where runners could share comments about current trail conditions. The data that might need to be stored includes:
 - runner name
 - trail name
 - trail description
@@ -35,7 +35,7 @@ Analyze the relationships (one-to-one, one-to-many, or many-to-many) between the
 ```text
 ┌──────────────┐       ┌───────────-──────┐       ┌──────────────┐
 │              │      ╱│                  │╲      │              │
-│    trails    │───────│ trail conditions │────--─│ runners      │
+│    trails    │───────│ trail conditions │────--─│    runners   │
 │              │      ╲│                  │╱      │              │
 └──────────────┘       └────────────-─────┘       └──────────────┘
 
@@ -58,7 +58,7 @@ Following is an ERD to represent the relationship between trails and trail condi
 
 ##Step 3: Create a migration file
 
-Remember that a migration is a file that contains SQL commands that are used to create and re-create the tables in a database on demand. Reference the [Intro to SQL]('https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md') article to remind yourself what to place in this file, and how to run it so that the tables are created in your database.
+Remember that a migration is a file that contains SQL commands that are used to create and re-create the tables in a database on demand. Reference the [Intro to SQL](https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md) article to remind yourself what to place in this file, and how to run it so that the tables are created in your database.
 
 **Example:** Following is the command that creates the trails table in the example database:
 
@@ -72,7 +72,7 @@ CREATE TABLE trails (
 );
 ```
 
-**TIP:** One of the challenges of building out a database is choosing the correct data type for each piece of information you're storing.
+**TIP:** One of the challenges of building out a database is choosing the correct data type for each piece of information you're storing. Make use of the PostgreSQL documentation when deciding which data type to assign to any particular column.
 
 **TIP:** Don't forget to create your database before you run your migration file.
 
@@ -88,7 +88,7 @@ INSERT INTO trails (name, description, length, elevation_gain) VALUES ('Mount Sa
 
 ##Step 5: Hook it up to Knex.js
 
-Remember that Knex.js is a third-party JavaScript library that builds SQL commands and sends them to a relational database system. Knex.js allows you to build a Node.js-based PostgreSQL client that communicates with a PostgreSQL server. Reference the [Knex.JS article]('https://github.com/gSchool/node-curriculum/blob/master/Knex/README.md') to set up a Node.js project that connects to the database you just created.
+Remember that Knex.js is a third-party JavaScript library that builds SQL commands and sends them to a relational database system. Knex.js allows you to build a Node.js-based PostgreSQL client that communicates with a PostgreSQL server. Reference the [Knex.JS article](https://github.com/gSchool/node-curriculum/blob/master/Knex/README.md) to set up a Node.js project that connects to the database you just created.
 
 **HINT:** Remember that there are two npm packages that will be essential to install.
 
@@ -101,6 +101,6 @@ Write out some queries using Knex.js that allow you to do the following:
 - update rows in a PostgreSQL table.
 - delete rows from a PostgreSQL table.
 
-**Challenge yourself** by creating some complex queries! Reference the Knex.js documentation a lot; familiarizing yourself with these docs now will save you lots of time (and pain...) in the near future.
+**Challenge yourself** by creating some complex queries! Reference the Knex.js documentation a lot; familiarizing yourself with these docs now will save you a lot of time (and pain...) in the near future.
 
 If you'd like feedback on your work, submit it to the assignment **Crushing_Knex**.
