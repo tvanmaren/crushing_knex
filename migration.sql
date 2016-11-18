@@ -10,34 +10,34 @@ DROP TABLE IF EXISTS artist;
 DROP TABLE IF EXISTS genre;
 
 CREATE TABLE genre (
-  id serial PRIMARY KEY NOT NULL,
-  name VARCHAR(10),
+  id VARCHAR(4) PRIMARY KEY NOT NULL,
+  name VARCHAR(25),
   description TEXT
 );
 
 CREATE TABLE artist (
-  id serial PRIMARY KEY NOT NULL,
-  name VARCHAR(15),
-  genre_id INT REFERENCES genre(id)
+  id CHAR(4) PRIMARY KEY NOT NULL,
+  name VARCHAR(25),
+  genre_id VARCHAR(4) REFERENCES genre(id) ON DELETE CASCADE
 );
 
 CREATE TABLE song (
-  id serial PRIMARY KEY NOT NULL,
+  id VARCHAR(6) PRIMARY KEY NOT NULL,
   title TEXT,
   length INTERVAL(0),
-  genre_id INT REFERENCES genre(id),
-  artist_id INT REFERENCES artist(id),
+  genre_id VARCHAR(4) REFERENCES genre(id) ON DELETE CASCADE,
+  artist_id CHAR(4) REFERENCES artist(id) ON DELETE CASCADE,
   year INT
 );
 
 CREATE TABLE users (
-  id serial PRIMARY KEY NOT NULL,
-  name VARCHAR(15),
+  id CHAR(4) PRIMARY KEY NOT NULL,
+  name VARCHAR(25),
   preferences TEXT
 );
 
 CREATE TABLE ratings (
-  song_id INT REFERENCES song(id),
-  user_id INT REFERENCES users(id),
+  song_id VARCHAR(4) REFERENCES song(id) ON DELETE CASCADE,
+  user_id CHAR(4) REFERENCES users(id) ON DELETE CASCADE,
   rating INT
 );
