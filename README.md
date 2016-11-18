@@ -45,6 +45,32 @@ Analyze the relationships (one-to-one, one-to-many, or many-to-many) between the
 
 ```
 
+```text
+
+                                                  ┌──────────────┐
+                                                  │              │╲
+                                                  │   genres     │─────
+                                                  │              │╱    │
+                                                  └──────────────┘     │
+                                                        /│\            │
+                                                         │             │
+                                                        \│/            │
+┌──────────────┐       ┌───────────-──────┐       ┌──────────────┐     │
+│              │      ╱│                  │╲      │              │     │
+│    users     │───────│    ratings       │────--─│    songs     │     │
+│              │      ╲│                  │╱      │              │     │
+└──────────────┘       └────────────-─────┘       └──────────────┘     │
+                                                        /│\            │
+                                                         │             │
+                                                        \│/            │
+                                                  ┌──────────────┐     │
+                                                  │              │╲    │
+                                                  │   artists    │─────
+                                                  │              │╱
+                                                  └──────────────┘
+
+```
+
 Following is an ERD to represent the relationship between trails and trail conditions:
 
 ```text
