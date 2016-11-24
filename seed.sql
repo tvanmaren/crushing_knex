@@ -4,6 +4,7 @@ INSERT INTO genre (id,name)
 VALUES ('POPR','Pop/Rock'),
 ('PERK','Progressive Rock'),
 ('AERK','Alternative Rock'),
+('SHRK', 'Synth Rock'),
 ('ATRK','Art Rock'),
 ('GMRK','Glam Rock'),
 ('WD','World'),
@@ -27,5 +28,17 @@ VALUES ('ACSS','Afro Celt Sound System'),
 ('MUSE','Muse'),
 ('PRGL','Peter Gabriel');
 
-INSERT INTO song (id, title, artist_id, genre_id, length, year)
-VALUES ('DDIE','Dead Inside','MUSE','POPR','1 min 30 secs',2015),
+INSERT INTO song (id, title, length, year)
+VALUES ('DDIE','Dead Inside','1 min 30 secs',2015);
+
+INSERT INTO artist_songs (artist_id, song_id)
+VALUES ('MUSE','DDIE');
+
+INSERT INTO song_genres (song_id, genre_id)
+VALUES ('DDIE','AERK'),
+('DDIE','SHRK');
+
+INSERT INTO artist_genres (artist_id, genre_id)
+VALUES ('MUSE','SHRK'),
+('MUSE','GMRK'),
+('MUSE','AERK');
